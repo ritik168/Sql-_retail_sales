@@ -19,7 +19,7 @@
 . Database Creations: The project start by creating a database name p1_retail_db
 . Table Creation: A table named retail_sales is created to store the data. The table structure     includes columns for transaction_id , sale date,sale time,customer id,gender,age ,product        category,quantity sold,unit price ,cost of goods ,and total sales amount.
 
---- SQL 
+*** SQL 
 create DATABASE p1_retail_db;
 
 create table retail_sales
