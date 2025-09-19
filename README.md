@@ -87,6 +87,78 @@ total_sale is null;
 select count(*) from retail_sales
 ```
 
+### 3.Data Analysis & Findings
+
+The following sql queries were developed to answer specific question to business questions.
+
+1. ** Retrieve  sales made on specific date **:
+```sql
+   select * 
+from retail_sales
+where sale_date='2022-11-05';
+```
+
+2. ** Write a sql queries to retrieve all columns for sales made on '2022-11-05'**:
+```sql
+   select * from retail_sales
+where category='Clothing' 
+and 
+to_char(sale_date,'YYYY-MM')='2022-11' AND quantiy>=4
+group by 1
+```
+ 
+3. ** Calculate total sales per category**:
+```sql
+select category,gender, sum(transactions_id) as total_trans
+from retail_sales 
+group by category,gender
+order by 1;
+```
+   
+5. ** Write a SQL query to find the average age of customer who purchased items from the 'Beauty Category'**:
+```sql
+select round(avg(age),2) from retail_sales
+where category='Beauty';
+```
+5.**Write a SQL query to find all the transactions where the total_dales is greater than 1000**:
+``sql
+select * from retail_sales
+where total_sale>=1000;
+```
+
+6. **Write a SQL query to find the total number of transactions (transaction_id) made by each gender in each category**:
+
+```sql
+select category,gender, sum(transactions_id) as total_trans
+from retail_sales 
+group by category,gender
+order by 1;
+```
+7.**Write a SQL query to calculate the average salary for each month. find out best selling month in each year**:
+```sql
+select 
+extract(year from sale_date) as year,
+extract(month from sale_date) as month,
+avg(total_sale) as avg_total_sale 
+from retail_sales
+group by 1,2
+order by 1,2
+```
+8.**Write a SQL query to find the top 5 customer based on the highest total sales**:
+```sql
+select 
+customer_id,sum(total_sale) as total_sales
+from retail_sales
+group by 1
+order by 2 desc
+limit 5;
+```
+9.**Write a SQL query to find the number of unique customer who purchased items for each category**:
+```sql
+select category,count(distinct customer_id) as cnt_unique_cs from  retail_sales
+group by category; 
+
+```
 
 
 
