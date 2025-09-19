@@ -35,7 +35,7 @@ create table retail_sales
 	cogs float,
 	total_sale float
 );
-
+***
 
 
 
