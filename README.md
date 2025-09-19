@@ -38,7 +38,54 @@ create table retail_sales
 );
 ```
 
+### 2. Data Exploration & cleaning
 
+- **Record Count**: Determine the total number of records in the dataset.
+- **Customer count**: Find out how many unique customers are in the Dataset.
+- **Category Count**:Identifying all unique product categories inthe dataset.
+- **Null value checks**: check for any null values in the dataset and delete records with            missing data.
+
+``` sql
+select * from retail_sales
+
+select * from retail_sales
+where transactions_id is null;
+select * from retail_sales
+where sale_date is 
+select * from retail_sales
+where transactions_id is null
+or
+sale_date is null 
+or 
+sale_time is null
+or
+gender is null
+or 
+category is null
+or 
+quantiy is null
+or 
+cogs is null
+or
+total_sale is null;
+Delete from retail_sales
+where transactions_id is null
+or
+sale_date is null 
+or 
+sale_time is null
+or
+gender is null
+or 
+category is null
+or 
+quantiy is null
+or 
+cogs is null
+or
+total_sale is null;
+select count(*) from retail_sales
+```
 
 
 
