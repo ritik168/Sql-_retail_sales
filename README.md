@@ -125,8 +125,7 @@ where category='Beauty';
 select * from retail_sales
 where total_sale>=1000;
 ```
-
-6. **Write a SQL query to find the total number of transactions (transaction_id) made by each gender in each category**:
+6.**Write a SQL query to find the total number of transactions (transaction_id) made by each gender in each category**:
 
 ```sql
 select category,gender, sum(transactions_id) as total_trans
