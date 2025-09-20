@@ -93,14 +93,14 @@ The following sql queries were developed to answer specific question to business
 
 1. ** Retrieve  sales made on specific date **:
 ```sql
-   select * 
+select * 
 from retail_sales
 where sale_date='2022-11-05';
 ```
 
 2. ** Write a sql queries to retrieve all columns for sales made on '2022-11-05'**:
 ```sql
-   select * from retail_sales
+select * from retail_sales
 where category='Clothing' 
 and 
 to_char(sale_date,'YYYY-MM')='2022-11' AND quantiy>=4
